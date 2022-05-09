@@ -16,7 +16,6 @@
       crossorigin="anonymous"
     />
 
-    
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,16 +24,13 @@
       rel="stylesheet"
     />
     <style>
-      .container {
-        padding: 5px;
+      html {
+        scroll-behavior: smooth !important;
       }
       footer,
       body {
         background-color: black;
         color: white;
-      }
-      html {
-        scroll-behavior: smooth !important;
       }
       .icon {
         max-width: 38px;
@@ -58,45 +54,52 @@
 
       /* How to use section */
       #how-to-use {
-        background-color: rgba(224, 230, 229, 0.836);
+        background-color: rgba(135, 236, 219, 0.836);
         height: 80vh;
+        display: flex;
         justify-content: center;
-        align-items: center;
-        /* display: flex; */
       }
       #youtube {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        margin: 10px;
       }
       iframe {
-        width: 60%;
-        height: 300px;
+        width: 60vw;
+        height: 70%;
         border-radius: 5px;
         margin: auto;
         display: block;
       }
       #tutorial {
         color: black;
-        font-size: 1.2rem;
+        font-size: 2vw;
         margin: 10px;
         padding: 10px;
         font-weight: 500;
         text-align: center;
-        text-shadow: 1px 1px 2px grey;
+        text-shadow: 1px 2px 2px grey;
       }
 
       /* Media queries */
+
       @media screen and (max-width: 480px) {
         .card-body {
           font-size: 18px;
         }
         iframe {
           width: 90%;
-          height: 100%;
+          height: auto;
+        }
+        #tutorial {
+          font-size: 5vw;
+          padding: 0;
+        }
+        #how-to-use {
+          height: 55vh;
+        }
+        #youtube {
+          padding: 0px;
+          margin: 5px;
         }
       }
       @media screen and (max-width: 375px) {
@@ -106,20 +109,9 @@
         }
         iframe {
           width: 100%;
-          height: 100%;
         }
         #tutorial {
-          font-size: 1.1rem;
-          padding: 0;
-        }
-      }
-      @media screen and (min-width: 1200px) {
-        iframe {
-          width: 55vw;
-          height: 50vh;
-        }
-         #tutorial {
-          font-size: 1.8rem;
+          font-size: 5.5vw;
         }
       }
     </style>
@@ -281,8 +273,7 @@
     </div>
 
     <!-- How to Use Section -->
-
-    <div class="container-fluid mt-3 d-flex" id="how-to-use">
+    <div class="container-fluid py-4" id="how-to-use">
       <div id="youtube">
         <iframe
           src="https://www.youtube.com/embed/JX31Ocb8ARY"
@@ -297,9 +288,9 @@
       </div>
     </div>
     <!-- Footer Section -->
-    <footer class="container py-4">
+    <footer class="container py-3">
       <div class="row">
-        <div class="col-12 col-md px-5">
+        <div class="col-12 col-md px-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -322,11 +313,11 @@
           </svg>
           <small class="d-block mb-3 text-muted">© 2022-2023</small>
         </div>
-        <div class="col-6 col-md px-5">
+        <div class="col-6 col-md px-4">
           <h5>Features</h5>
           <ul class="list-unstyled text-small">
             <li>
-              <a class="text-muted" href="javascript:void(0)">Cool stuff</a>
+              <a class="text-muted" href="javascript:void(0)">Cool features</a>
             </li>
             <li>
               <a class="text-muted" href="javascript:void(0)">Random feature</a>
@@ -342,7 +333,7 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md px-5">
+        <div class="col-6 col-md px-4">
           <h5>About</h5>
           <ul class="list-unstyled text-small">
             <li><a class="text-muted" href="javascript:void(0)">Team</a></li>
